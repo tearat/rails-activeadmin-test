@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### undefined method `layout'
 
-Things you may want to cover:
+undefined method `layout' for ActiveAdmin::Devise::SessionsController:Class
 
-* Ruby version
+- when use rails api only, it needs to modify the ApplicationController to inherit ActionController::Base (in app/controllers/application_controller.rb)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Create assets

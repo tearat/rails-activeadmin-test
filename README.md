@@ -33,3 +33,9 @@ Modify the ApplicationController to inherit ActionController::Base unstead of Ac
 
 - rails db:migrate
 - rails db:seed
+
+### Add ActiveAdmin resource
+
+`rails generate active_admin:resource MyModel`
+
+And then uncomment line like `permit_params :title`

@@ -1,21 +1,35 @@
 # README
 
+### Add gems
+
+- gem 'devise'
+- gem 'cancancan'
+- gem 'draper'
+- gem 'pundit'
+
+### Generate User model
+
+rails g active_admin:install User
+
+### Turn off API mode
+
+`/config/application.rb`
+
+Comment `config.api_only = true` line
+
+### Create assets
+
+Copy the app/assets folder as it is
+
 ### undefined method `layout'
 
-undefined method `layout' for ActiveAdmin::Devise::SessionsController:Class
+`undefined method 'layout' for ActiveAdmin::Devise::SessionsController:Class`
 
-- when use rails api only, it needs to modify the ApplicationController to inherit ActionController::Base (in app/controllers/application_controller.rb)
+`app/controllers/application_controller.rb`
 
-- Create assets
+Modify the ApplicationController to inherit ActionController::Base unstead of ActionController::API
 
-## RSPec
+### Database and example admin user
 
-```ruby
-group :development, :test do
-  gem 'rspec-rails', '~> 4.0.1'
-end
-```
-
-- `bundle install`
-
-- `rails generate rspec:install`
+- rails db:migrate
+- rails db:seed
